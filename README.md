@@ -1,18 +1,40 @@
-# README for a newly created project.
+jQuery Annotation Plugin
+========================
 
-There are a couple of things you should do first, before you can use all of Git's power:
+The *jQuery Annotation Plugin* is a practical experiment that allow HTML elements being annotated with functionalities without writing a single code of JavaScript.
 
-  * Add a remote to this project: in the Cloud9 IDE command line, you can execute the following commands
-    `git remote add [remote name] [remote url (eg. 'git@github.com:/ajaxorg/node_chat')]` [Enter]
-  * Create new files inside your project
-  * Add them to to Git by executing the following command
-    `git add [file1, file2, file3, ...]` [Enter]
-  * Create a commit which can be pushed to the remote you just added
-    `git commit -m 'added new files'` [Enter]
-  * Push the commit the remote
-    `git push [remote name] master` [Enter]
+What? No JavaScrit code?
+------------------------
 
-That's it! If this doesn't work for you, please visit the excellent resources from [Github.com](http://help.github.com) and the [Pro Git](http://http://progit.org/book/) book.
-If you can't find your answers there, feel free to ask us via Twitter (@cloud9ide), [mailing list](groups.google.com/group/cloud9-ide) or IRC (#cloud9ide on freenode).
+Yes. All you need are two script references.
 
-Happy coding!
+```
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.annotations.js"></script>
+```
+
+And just start annotating your HTML elements!
+
+How to annotate HTML elements?
+------------------------------
+
+Simple! Add a class value to your HTML elements like `@onclick-show-box1`. It would be more of help if you take a look at the following example.
+
+A full example please!
+----------------------
+
+```
+<html>
+  <head>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.annotations.js"></script>
+  </head>
+  <body>
+    <!-- C_l_i_c_k_i_n_g this link will s_h_o_w the element with id b_o_x_1  -->
+    <a href="#" class="@onclick-show-box1">@onclick-show-box1</a>
+    <div id="box1" class="box" style="display:none">
+      #box1
+    </div>
+  </body>
+</html>
+```
